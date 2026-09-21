@@ -211,7 +211,7 @@ div.sheet-main {
   grid-gap: 0px;
   width:    846px; /* Defines the width and height of the sheet */
   height:   1650px;
-  background-image: url(https://i.imgur.com/IOFefj6.jpeg?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/IOFefj6.jpeg);
   background-size: 846px 1650px; /* Sets the sheet border image to same size as sheet - Normal Sheet = https://i.imgur.com/MM9C2Bx.jpeg 846px 1200px */
   background-repeat: no-repeat;
 }

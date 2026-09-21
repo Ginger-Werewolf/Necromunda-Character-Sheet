@@ -483,7 +483,7 @@
 <rolltemplate class="sheet-rolltemplate-necWound">
   <div class="sheet-container sheet-color-{{color}}">
     <div class="sheet-header">
-      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/sqcvtU8.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/sqcvtU8.png" alt="Necromunda"> </div>{{/title}}
       {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
     </div>
     <div class="sheet-content">
