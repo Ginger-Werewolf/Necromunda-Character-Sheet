@@ -1,0 +1,1396 @@
+/*------------------------------------------------*\
+  #GENERAL
+\*------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon&display=swap');
+
+/*Firefox spinner buttons mod*/
+/*by default is not visible*/
+.charsheet input[Type="number"]{
+    -moz-appearance: textfield;
+}
+/* hover over reveals buttons*/
+.charsheet input[Type="number"]:hover{
+    -moz-appearance: initial;
+}
+/* Chrome, Safari, Edge, Opera spinner buttons*/
+/*by default is not visible*/
+.charsheet input[type="number"]::-webkit-inner-spin-button, 
+.charsheet input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+/* hover over reveals buttons*/
+.charsheet input[type="number"]:hover::-webkit-inner-spin-button, 
+.charsheet input[type="number"]:hover::-webkit-outer-spin-button {
+    display: inline
+}
+/* --------- Text ------------- */
+
+
+span.sheet-bold{
+  font-weight: 800;
+  font-size: medium;
+  font-family: 'Courier New', monospace;
+  color: lime;
+}
+
+label {
+  margin: 0px 0px 0px 0px;
+  font-size: 1em;
+  color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+labellrg {
+  margin: 0px 0px 0px 0px;
+  font-size: 1em;
+  color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+/* --------- Inputs ------------- */
+
+input[type="text"] {
+  background-color: transparent;
+  border-style: none none none none;
+  border-color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+  color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+textarea {
+  background-color: transparent;
+  border-style: none none none none;
+  width: 89%;
+  height: 60%;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+input[type="checkbox"] {
+  border-style: solid lime;
+  border-radius: 0px;
+  width: 10px;
+  height: 10px;
+
+}
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus{
+  background-color: #000000;
+  color: lime;
+  font-family: 'Courier New', monospace;
+}
+
+/* -----Hides up/down buttons on numberfields that don't need them ---*/
+
+input[type=number].sheet-ref::-webkit-inner-spin-button,
+input[type=number].sheet-ref::-webkit-outer-spin-button,
+input[type=number].sheet-txtfield::-webkit-inner-spin-button,
+input[type=number].sheet-txtfield::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number].sheet-ref,
+input[type=number].sheet-txtfield {
+  -moz-appearance: textfield;
+}
+
+/* ------- Buttons ---------- */
+
+button[type="roll"]:not(.sheet-small){
+  color: black;
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+}
+
+button[type="roll"]:not(.sheet-small)::before{
+  font-size: 1em;
+}
+
+
+/*-----------------------------------------------------------------*\
+  #SECTIONS
+\*-----------------------------------------------------------------*/
+
+
+/* --------- General Section Styling ------------- */
+.sheet-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.sheet-flex-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.sheet-flex-down {
+  flex-flow: column nowrap;
+}
+
+.sheet-section {
+    padding: 1px;
+    min-height: 100%;
+}
+
+.sheet-flex-left {
+  display: flex;
+  align-items: start;
+}
+
+.sheet-flex-right {
+  display: flex;
+  align-items: right;
+}
+
+button[type=roll].sheet-d6-dice::before {
+    font-family: 'dicefontd6';
+    content: 'F ';
+}
+/*  ----- Character Sheet Structure -------
+
+'.sheet-main' defines the sheet's general structure and dimensions using CSS Grid.
+
+It uses 'Grid template areas' to name  each sheet section,
+so that they can be positioned in the grid easily,
+ while also providing a human-readable overview. */
+ 
+div.sheet-main {
+  display: grid;
+  grid-template-columns: 55px 3.5fr 3.5fr;
+  grid-template-rows: 40px 85px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px;
+  grid-template-areas:".          .          ."
+                      ".          logo       name"
+                      ".          stbeg      GangerType"
+                      ".          stats      GangerType"
+                      ".          stats      wounds"
+                      ".          stats      wounds"
+                      ".          stats      armour"
+                      ".          stats      armour"
+                      ".          stats      treasure"
+                      ".          stats      treasure"
+                      ".          stats      treasure"
+                      ".          stats      treasure"
+                      ".          stats      treasure"
+                      ".          stend      ."
+                      ".          weaponsbeg weaponsbeg"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weapons    weapons"
+                      ".          weaponsend weaponsend"
+                      ".          .          ."
+                      ".          meleewbeg  meleewbeg"
+                      ".          meleew     meleew"
+                      ".          meleew     meleew"
+                      ".          meleew     meleew"
+                      ".          meleewend  meleewend"
+                      ".          .          ."
+                      ".          notessect  notessect"
+                      ".          notessect  notessect"
+                      ".          notessect  notessect"
+                      ".          notessect  notessect"
+                      ".          notessect  notessect";
+
+
+  grid-gap: 0px;
+  width:    846px; /* Defines the width and height of the sheet */
+  height:   1650px;
+  background-image: url(https://i.imgur.com/IOFefj6.jpeg?raw=true);
+  background-size: 846px 1650px; /* Sets the sheet border image to same size as sheet - Normal Sheet = https://i.imgur.com/MM9C2Bx.jpeg 846px 1200px */
+  background-repeat: no-repeat;
+}
+
+/* Section-specific CSS is written in a way that removes the need to define classes
+on each individual   */
+/* ----https://i.imgur.com/K7Jd5kc.png-------------- */
+/* LOGO SECTION */
+
+div.sheet-logo{
+  grid-area: logo;
+  background-image: url(https://i.imgur.com/K7Jd5kc.png?raw=true);
+  /* ---- old https://i.imgur.com/kKVVIT1.png-------------- */
+  background-size: 295px 70px;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  margin-top: 15px;
+  display: flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  flex-flow: column;
+}
+
+div.sheet-logo span{
+  font-size: 15px;
+  background-color: white;
+  border: 2px solid black; 
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* stbeg (Stat Beginning where I put in the Column titles SECTION */
+
+div.sheet-stbeg{
+  grid-area: stbeg;
+  margin-left: 15px;
+}
+
+
+div.sheet-stbeg div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/ctdAK6A.png?raw=true);
+  /* DONE Boarder No1 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 35px;
+  width: 300px;
+}
+
+div.sheet-stbeg div.sheet-stat-block label{
+  width: 100px;
+  padding-left: 10px;
+  text-align: right;
+  color: lime;
+}
+
+div.sheet-stbeg input,
+div.sheet-stbeg span{
+  height: 35px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  color: lime;
+  text-align: center;
+  padding-left: 20px;
+}
+
+div.sheet-stbeg span{
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* STATS SECTION Repeating section that I use for the classic Statline */
+
+div.sheet-stats{
+  grid-area: stats;
+  margin-left: 15px;
+}
+
+div.sheet-stats div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/BiJh8Wj.png?raw=true);
+  /* DONE Boarder No2 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 3px;
+  height: 35px;
+  width: 300px;
+}
+
+div.sheet-stats div.sheet-stat-block label{
+  width: 90px;
+  padding-left: 10px;
+  color: lime;
+}
+
+div.sheet-stats input,
+div.sheet-stats span{
+  height: 35px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  color: lime;
+  text-align: center;
+  padding-left: 20px;
+}
+
+div.sheet-stats span{
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+/* ------------------------------------------------------------ */
+/* stend SECTION end of teh stats section */
+
+div.sheet-stend{
+  grid-area: stend;
+  margin-left: 15px;
+}
+
+div.sheet-stend div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/nuOLlp0.png?raw=true);
+  /* DONE Boarder B */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 15px;
+  height: 70px;
+  width: 300px;
+}
+
+div.sheet-stend div.sheet-stat-block label{
+  width: 90px;
+  padding-left: 10px;
+  color: lime;
+}
+
+div.sheet-stend input,
+div.sheet-stend span{
+  height: 35px;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  color: lime;
+  text-align: center;
+  padding-left: 20px;
+}
+
+div.sheet-stend span{
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+/* ------------------------------------------------------------ */
+/* WOUNDS SECTION */
+
+div.sheet-wounds{
+  grid-area: wounds;
+/*  margin-left: 15px; */
+}
+
+div.sheet-wounds div.sheet-wound-block{
+  background-image: url(https://i.imgur.com/iivdVOC.png?raw=true);
+    /* DONE Boarder No3 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 300px;
+}
+
+div.sheet-wounds div.sheet-wound-block label{
+  width: 70px;
+  padding-left: 15px;
+  color: lime;
+}
+
+div.sheet-wounds input,
+div.sheet-wounds span{
+  height: 45px;
+  width: 45px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 1px;
+}
+
+div.sheet-wounds span{
+  padding-top: 7px;
+  padding-left: 1px;
+}
+/* ARMOUR SECTION */
+
+div.sheet-armour{
+  grid-area: armour;
+
+}
+
+div.sheet-armour div.sheet-armour-block{
+  background-image: url(https://i.imgur.com/bCU0AtO.png?raw=true);
+   /* DONE Boarder No4 Old https://i.imgur.com/1LJNpFI.png*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 300px;
+}
+
+div.sheet-armour div.sheet-armour-block label{
+  width: 20px;
+  padding-left: 10px;
+  font-size: 0.8em
+  color: lime;
+}
+
+div.sheet-armour input,
+div.sheet-armour span{
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  padding-left: 0px;
+  color: lime;
+}
+
+div.sheet-armour div.sheet-armour-block select{
+  font-size: 1em;
+  font-weight: 600;
+  color: lime;
+  font-family: 'Courier New', monospace;display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+div.sheet-armour span{
+  padding-top: 7px;
+  padding-left: 0px;
+}
+
+/* ------------------------------------------------------------ */
+/* GangerType SECTION aka Ganger type */
+
+div.sheet-GangerType{
+  grid-area: GangerType;
+}
+
+div.sheet-GangerType div.sheet-type-block{
+  background-image: url(https://i.imgur.com/jkJjXtv.png?raw=true);
+    /* DONE Boarder Credits old https://i.imgur.com/iivdVOC.png*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+}
+
+div.sheet-GangerType div.sheet-type-block label{
+  width: 70px;
+  padding-left: 35px;
+  color: lime;
+}
+
+div.sheet-GangerType div.sheet-type-block select{
+  font-size: 1em;
+  font-weight: 600;
+  color: lime;
+  font-family: 'Courier New', monospace;display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+
+div.sheet-GangerType input,
+div.sheet-GangerType span{
+  height: 20px;
+  width: 145px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+div.sheet-GangerType span{
+  align-items: center;
+  padding-top: 7px;
+  padding-left: 15px;
+}
+
+/* ------------------------------------------------------------ */
+/* GoldLevel SECTION */
+
+div.sheet-GoldLevel{
+  grid-area: GoldLevel;
+}
+
+div.sheet-GoldLevel div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/iivdVOC.png?raw=true);
+    /* DONE Boarder No3 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 300px;
+}
+
+div.sheet-GoldLevel div.sheet-stat-block label{
+  width: 70px;
+  padding-left: 15px;
+  color: lime;
+}
+
+div.sheet-GoldLevel input,
+div.sheet-GoldLevel span{
+  height: 45px;
+  width: 45px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 1px;
+}
+
+div.sheet-GoldLevel span{
+  padding-top: 7px;
+  padding-left: 1px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* NAME SECTION */
+
+div.sheet-name{
+  grid-area: name;
+  padding-top: 18px;
+}
+
+div.sheet-name div.sheet-section-small{
+  background-image: url(https://i.imgur.com/stYtCAP.png?raw=true);
+   /* DONE Old Boarder No5 https://i.imgur.com/9UzKr7k.png */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 300px;
+}
+
+div.sheet-name label{
+  width: 50px;
+  padding-left: 15px;
+  color: lime;
+}
+
+div.sheet-name input{
+  width: 180px;
+  text-align: center;
+}
+
+div.sheet-name input[type="text"] {
+  background-color: transparent;
+  border-style: none none none none;
+  border-color: lime;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+div.sheet-name input[type="number"] {
+  background-color: transparent;
+  border: none;
+  color: lime;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* TREASURE SECTION This is the notes section for armour  */
+
+div.sheet-treasure{
+  grid-area: treasure;
+  background-image: url(https://i.imgur.com/8BX8WVX.png?raw=true);
+  /* DONE Boarder No6 Old https://i.imgur.com/gT2KE4N.png or https://i.imgur.com/ouwuMnb.png*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 225px;
+  width: 300px;
+}
+
+div.sheet-treasure label{
+  margin-top: 1px;
+}
+
+div.sheet-treasure textarea{
+  height: 60%;
+  margin-top: 10px;
+  margin-left: 14px;
+}
+/* ------------------------------------------------------------ */
+/* notessect SECTION This is the notes section at the bottom  */
+
+div.sheet-notessect{
+  grid-area: notessect;
+  margin-left: 15px;
+  background-image: url(https://i.imgur.com/CzjuDym.png?raw=true);
+  /* DONE Boarder No6 Old https://i.imgur.com/gT2KE4N.png or https://i.imgur.com/ouwuMnb.png*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 228px;
+  width: 650px;
+}
+
+div.sheet-notessect label{
+  margin-top: 1px;
+}
+
+div.sheet-notessect textarea{
+  height: 60%;
+  margin-top: 10px;
+  margin-left: 14px;
+}
+/* ------------------------------------------------------------ */
+/* Weapons Begin SECTION */
+
+div.sheet-weaponsbeg{
+  grid-area: weaponsbeg;
+  margin-left: 15px;
+}
+
+
+div.sheet-weaponsbeg div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/RTfLlmM.png?raw=true);
+   /* DONE Boarder No7 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-weaponsbeg div.sheet-stat-block label{
+  width: 12px;
+  padding-top: 15px;
+  text-align: center;
+  color: lime;
+  font-size: 0.9em;
+}
+
+
+div.sheet-weaponsbeg input,
+div.sheet-weaponsbeg span{
+  height: 35px;
+  width: 60px;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 20px;
+}
+
+div.sheet-weaponsbeg span{
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* Weapons SECTION Individual*/
+
+div.sheet-weapons{
+  grid-area: weapons;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+div.sheet-weapons div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/GE92DRk.png?raw=true);
+    /* DONE Boarder No9 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 5px;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-weapons div.sheet-stat-block label{
+  width: 35px;
+  text-align: center;
+  color: lime;
+  padding-left: 10px;
+}
+
+div.sheet-weapons div.sheet-type-block select{
+  font-size: 1em;
+  font-weight: 600;
+  color: lime;
+  font-family: 'Courier New', monospace;display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+div.sheet-weapons input,
+div.sheet-weapons span{
+  margin-top: 5px;
+  height: 35px;
+  width: 60px;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 1px;
+}
+
+div.sheet-weapons span{
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* weaponsend SECTION */
+
+div.sheet-weaponsend{
+  grid-area: weaponsend;
+  margin-left: 15px;
+}
+
+
+div.sheet-weaponsend div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/RXdbRxo.png?raw=true);
+     /* DONE Boarder No8 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-weaponsend div.sheet-stat-block label{
+  width: 90px;
+  padding-left: 10px;
+  color: lime;
+}
+
+div.sheet-weaponsend input,
+div.sheet-weaponsend span{
+  height: 35px;
+  width: 60px;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 20px;
+}
+
+div.sheet-weaponsend span{
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+/* ------------------------------------------------------------ */
+/* Melee Begin SECTION */
+
+div.sheet-meleewbeg{
+  grid-area: meleewbeg;
+  margin-left: 15px;
+}
+
+
+div.sheet-meleewbeg div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/kV4sW9L.png?raw=true);
+   /* DONE Boarder No7 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-meleewbeg div.sheet-stat-block label{
+  width: 12px;
+  padding-top: 15px;
+  text-align: center;
+  color: lime;
+  font-size: 0.9em;
+}
+
+
+div.sheet-meleewbeg input,
+div.sheet-meleewbeg span{
+  height: 35px;
+  width: 60px;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 20px;
+}
+
+div.sheet-meleewbeg span{
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* Melee SECTION Individual*/
+
+div.sheet-meleew{
+  grid-area: meleew;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+div.sheet-meleew div.sheet-stat-block{
+  background-image: url(https://imgur.com/GE92DRk.png?raw=true);
+    /* DONE Boarder No9 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 5px;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-meleew div.sheet-stat-block label{
+  width: 35px;
+  text-align: center;
+  color: lime;
+  padding-left: 10px;
+}
+
+div.sheet-meleew div.sheet-type-block select{
+  font-size: 1em;
+  font-weight: 600;
+  color: lime;
+  font-family: 'Courier New', monospace;display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+div.sheet-meleew input,
+div.sheet-meleew span{
+  margin-top: 5px;
+  height: 35px;
+  width: 60px;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 1px;
+}
+
+div.sheet-meleew span{
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+/* ------------------------------------------------------------ */
+/* Melee end SECTION */
+
+div.sheet-meleewend{
+  grid-area: meleewend;
+  margin-left: 15px;
+}
+
+
+div.sheet-meleewend div.sheet-stat-block{
+  background-image: url(https://i.imgur.com/yNobl4P.png?raw=true);
+     /* DONE Boarder No8 */
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+  height: 40px;
+  width: 650px;
+}
+
+div.sheet-meleewend div.sheet-stat-block label{
+  width: 90px;
+  padding-left: 10px;
+  color: lime;
+}
+
+div.sheet-meleewend input,
+div.sheet-meleewend span{
+  height: 35px;
+  width: 60px;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 20px;
+}
+
+div.sheet-meleewend span{
+  padding-top: 15px;
+  padding-left: 10px;
+}
+/* ------------------------------------------------------------ */
+
+/* ----------------ROLL TEMPLATES---------------------------------- */
+
+.sheet-rolltemplate-necMelee {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-necMelee {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-necMelee .sheet-container {
+  border: 3px solid lime;
+  border-radius: 3px;
+}
+
+.sheet-rolltemplate-necMelee .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  text-transform: capitalize;
+  font-family: 'Courier New', monospace;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+
+.sheet-rolltemplate-necMelee .sheet-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necMelee .sheet-title img.sheet-phoenix {
+  width: 33px;
+  height: 33px;
+  float: right;
+}
+.sheet-rolltemplate-necMelee .sheet-title img.sheet-NecroLogo {
+  width: 298px;
+  height: 66px;
+  float: middle;
+}
+
+.sheet-rolltemplate-necMelee .sheet-subtitle {
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necMelee .sheet-container {
+  --header-bg-color: #333333;
+  --header-text-color: #00FF00;
+}
+.sheet-rolltemplate-necMelee .sheet-container.sheet-color-lime {
+  --header-bg-color: #00FF00;
+  --header-text-color: #000000;
+}
+.sheet-rolltemplate-necMelee .sheet-container.sheet-color-green {
+  --header-bg-color: #008000;
+}
+.sheet-rolltemplate-necMelee .sheet-container.sheet-color-black {
+  --header-bg-color: #000000;
+}
+.sheet-rolltemplate-necMelee .sheet-container.sheet-color-white {
+  --header-bg-color: #FFF;
+  --header-text-color: #000;
+}
+
+.sheet-rolltemplate-necMelee .sheet-content {
+  display: grid;
+  background: #000000;
+  color: lime;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+
+.sheet-rolltemplate-necMelee .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-necMelee .sheet-content .sheet-key {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.sheet-rolltemplate-necMelee .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-necMelee .sheet-content :nth-child(4n) {
+  background: #333333;
+}
+
+.sheet-rolltemplate-necMelee .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+/* ------------------------------------------------------------ */
+
+.sheet-rolltemplate-necRanged {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-necRanged {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-necRanged .sheet-container {
+  border: 3px solid lime;
+  border-radius: 3px;
+}
+
+.sheet-rolltemplate-necRanged .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  text-transform: capitalize;
+  font-family: 'Courier New', monospace;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+
+.sheet-rolltemplate-necRanged .sheet-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necRanged .sheet-title img.sheet-phoenix {
+  width: 33px;
+  height: 33px;
+  float: right;
+}
+.sheet-rolltemplate-necRanged .sheet-title img.sheet-NecroLogo {
+  width: 298px;
+  height: 66px;
+  float: middle;
+}
+
+.sheet-rolltemplate-necRanged .sheet-subtitle {
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necRanged .sheet-RapidFire {
+  font-size: 1.0em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necRanged .sheet-container {
+  --header-bg-color: #333333;
+  --header-text-color: #00FF00;
+}
+.sheet-rolltemplate-necRanged .sheet-container.sheet-color-lime {
+  --header-bg-color: #00FF00;
+  --header-text-color: #000000;
+}
+.sheet-rolltemplate-necRanged .sheet-container.sheet-color-green {
+  --header-bg-color: #008000;
+}
+.sheet-rolltemplate-necRanged .sheet-container.sheet-color-black {
+  --header-bg-color: #000000;
+}
+.sheet-rolltemplate-necRanged .sheet-container.sheet-color-white {
+  --header-bg-color: #FFF;
+  --header-text-color: #000;
+}
+
+.sheet-rolltemplate-necRanged .sheet-content {
+  display: grid;
+  background: #000000;
+  color: lime;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+
+.sheet-rolltemplate-necRanged .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-necRanged .sheet-content .sheet-key {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.sheet-rolltemplate-necRanged .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-necRanged .sheet-content :nth-child(4n) {
+  background: #333333;
+}
+
+.sheet-rolltemplate-necRanged .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+/* ------------------------------------------------------------ */
+
+.sheet-rolltemplate-necShield {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-necShield {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-necShield .sheet-container {
+  border: 3px solid lime;
+  border-radius: 3px;
+}
+
+.sheet-rolltemplate-necShield .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  text-transform: capitalize;
+  font-family: 'Courier New', monospace;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+
+.sheet-rolltemplate-necShield .sheet-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necShield .sheet-title img.sheet-phoenix {
+  width: 33px;
+  height: 33px;
+  float: right;
+}
+.sheet-rolltemplate-necShield .sheet-title img.sheet-NecroLogo {
+  width: 298px;
+  height: 66px;
+  float: middle;
+}
+
+.sheet-rolltemplate-necShield .sheet-subtitle {
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necShield .sheet-container {
+  --header-bg-color: #333333;
+  --header-text-color: #00FF00;
+}
+.sheet-rolltemplate-necShield .sheet-container.sheet-color-lime {
+  --header-bg-color: #00FF00;
+  --header-text-color: #000000;
+}
+.sheet-rolltemplate-necShield .sheet-container.sheet-color-green {
+  --header-bg-color: #008000;
+}
+.sheet-rolltemplate-necShield .sheet-container.sheet-color-black {
+  --header-bg-color: #000000;
+}
+.sheet-rolltemplate-necShield .sheet-container.sheet-color-white {
+  --header-bg-color: #FFF;
+  --header-text-color: #000;
+}
+
+.sheet-rolltemplate-necShield .sheet-content {
+  display: grid;
+  background: #000000;
+  color: lime;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+
+.sheet-rolltemplate-necShield .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-necShield .sheet-content .sheet-key {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.sheet-rolltemplate-necShield .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-necShield .sheet-content :nth-child(4n) {
+  background: #333333;
+}
+
+.sheet-rolltemplate-necShield .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+/* ------------------------------------------------------------ */
+
+.sheet-rolltemplate-necGeneric {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-necGeneric {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-necGeneric .sheet-container {
+  border: 3px solid lime;
+  border-radius: 3px;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  text-transform: capitalize;
+  font-family: 'Courier New', monospace;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-title img.sheet-phoenix {
+  width: 33px;
+  height: 33px;
+  float: right;
+}
+.sheet-rolltemplate-necGeneric .sheet-title img.sheet-NecroLogo {
+  width: 298px;
+  height: 66px;
+  float: middle;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-subtitle {
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-container {
+  --header-bg-color: #333333;
+  --header-text-color: #00FF00;
+}
+.sheet-rolltemplate-necGeneric .sheet-container.sheet-color-lime {
+  --header-bg-color: #00FF00;
+  --header-text-color: #000000;
+}
+.sheet-rolltemplate-necGeneric .sheet-container.sheet-color-green {
+  --header-bg-color: #008000;
+}
+.sheet-rolltemplate-necGeneric .sheet-container.sheet-color-black {
+  --header-bg-color: #000000;
+}
+.sheet-rolltemplate-necGeneric .sheet-container.sheet-color-white {
+  --header-bg-color: #FFF;
+  --header-text-color: #000;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-content {
+  display: grid;
+  background: #000000;
+  color: lime;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-content .sheet-key {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-necGeneric .sheet-content :nth-child(4n) {
+  background: #333333;
+}
+
+.sheet-rolltemplate-necGeneric .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------ */
+
+.sheet-rolltemplate-necWound {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-necWound {
+  margin-left: -7px;
+}
+.sheet-rolltemplate-necWound .sheet-container {
+  border: 3px solid lime;
+  border-radius: 3px;
+}
+
+.sheet-rolltemplate-necWound .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  text-transform: capitalize;
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+
+.sheet-rolltemplate-necWound .sheet-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necWound .sheet-title img.sheet-phoenix {
+  width: 33px;
+  height: 33px;
+  float: right;
+}
+.sheet-rolltemplate-necWound .sheet-title img.sheet-NecroLogo {
+  width: 298px;
+  height: 81px;
+  float: middle;
+}
+
+.sheet-rolltemplate-necWound .sheet-subtitle {
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necWound .sheet-container {
+  --header-bg-color: #333333;
+  --header-text-color: #00FF00;
+}
+.sheet-rolltemplate-necWound .sheet-container.sheet-color-lime {
+  --header-bg-color: #00FF00;
+  --header-text-color: #000000;
+}
+.sheet-rolltemplate-necWound .sheet-container.sheet-color-green {
+  --header-bg-color: #008000;
+}
+.sheet-rolltemplate-necWound .sheet-container.sheet-color-black {
+  --header-bg-color: #000000;
+}
+.sheet-rolltemplate-necWound .sheet-container.sheet-color-white {
+  --header-bg-color: #FFF;
+  --header-text-color: #000;
+}
+
+.sheet-rolltemplate-necWound .sheet-content {
+  display: grid;
+  background: #000000;
+  color: lime;
+  grid-template-columns: auto auto;
+  line-height: 1.4em;
+}
+
+.sheet-rolltemplate-necWound .sheet-content > div {
+  padding: 5px;
+}
+
+.sheet-rolltemplate-necWound .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.sheet-rolltemplate-necWound .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-necWound .sheet-content :nth-child(4n) {
+  background: #333333;
+}
+
+.sheet-rolltemplate-necWound .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+
+/* ------------------------------------------------------------ */
+

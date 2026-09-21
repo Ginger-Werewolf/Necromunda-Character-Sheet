@@ -1,0 +1,573 @@
+
+<div class="main">
+
+<!-- LOGO SECTION -->
+  <div class="logo section"> </div>
+
+<!-- ------------------Left Column------------------------- -->  
+
+<!-- MAIN STAT SECTION -->
+
+  <div class="stbeg section">
+          
+    <div class="stat-block flex-center">
+      <label>Characteristic</label>
+      <label>Base</label>
+      <label>Mod&pm;</label>
+      <label>Test</label>
+    </div>
+  </div>
+
+  <div class="stats section">
+    
+    <div class="stat-block flex-center">
+      <label>M: &#34;</label>
+      <input name="attr_M" type="number" value="0">
+      <input name="attr_M_max" type="number" value="0">
+    </div>
+      
+    <div class="stat-block flex-center">
+      <label>WS: &#43;</label>
+      <input name="attr_WS" type="number" value="">
+      <input name="attr_WS_bonus" type="number" value="0">
+      <!-- <button name="roll_BS" type="roll" value="&{template:default} {{name=@{character_name}'s Melee To Hit}} {{Result=[[d6+?{Modifier|0}>@{WS}+@{WS_bonus}]]}}"></button> -->
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>BS: &#43;</label>
+      <input name="attr_BS" type="number" value="0">
+      <input name="attr_BS_bonus" type="number" value="0">
+      <!-- <button name="roll_BS" type="roll" value="&{template:default} {{name=@{character_name}'s Ballistic To Hit}} {{Result=[[d6>@{BS}+@{BS_bonus}]]}}"></button> -->
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>S:</label>
+      <input name="attr_S" type="number" value="0">
+      <input name="attr_S_bonus" type="number" value="0">
+      <button name="roll_S" type="roll" value="&{template:necGeneric}} {{title=@{character_name}'s Strength Test}} {{subtitle=Rolling under or equal to their Strength of [[@{S} + @{S_bonus} ]] }} {{Roll = [[1D6]] }}  "></button>
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>T:</label>
+      <input name="attr_T" type="number" value="0">
+      <input name="attr_T_Bonus" type="number" value="0">
+      <button name="roll_T" type="roll" value="&{template:necGeneric}} {{title=@{character_name}'s Toughness Test}} {{subtitle=Rolling under or equal to their Toughness of [[@{T} + @{T_bonus} ]] }} {{Roll = [[1D6]] }}  "></button> 
+    </div>
+    
+    <div class="stat-block flex-center">
+      <label>I: &#43;</label>
+      <input name="attr_I" type="number" value="">
+      <input name="attr_I_bonus" type="number" value="">
+      <button name="roll_I" type="roll" value="&{template:necGeneric}} {{title=@{character_name}&#39;s Initiative Test}} {{subtitle=Rolling equal to or over their Initiative of [[@{I} + @{I_bonus} ]] on 1D6}} {{Roll = [[1D6]] }} "></button>
+    </div>
+   
+    <div class="stat-block flex-center">
+      <label>A:</label>
+      <input name="attr_A" type="number" value="0">
+      <input name="attr_A_bonus" type="number" value="0">
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>Ld: &#43;</label>
+      <input name="attr_LD" type="number" value="0">
+      <input name="attr_LD_bonus" type="number" value="0">
+      <button name="roll_BS" type="roll" value="&{template:necGeneric}} {{title=@{character_name}&#39;s Leadership Test}} {{subtitle=Rolling equal to or over their Leadership of [[@{LD} + @{LD_bonus} ]] on 2D6}} {{Roll = [[2D6]] }}"></button>
+    </div>
+     
+    <div class="stat-block flex-center">
+      <label>Cl: &#43;</label>
+      <input name="attr_CL" type="number" value="0">
+      <input name="attr_CL_bonus" type="number" value="0">
+      <button name="roll_CL" type="roll" value="&{template:necGeneric}} {{title=@{character_name}&#39;s Cool Test}} {{subtitle=Rolling equal to or over their Cool of [[@{CL} + @{CL_bonus} ]] on 2D6}} {{Roll = [[2D6]] }}"></button> 
+    </div>
+    
+    <div class="stat-block flex-center">
+      <label>Wil: &#43;</label>
+      <input name="attr_Will" type="number" value="1">
+      <input name="attr_Will_bonus" type="number" value="0">
+      <button name="roll_Will" type="roll" value="&{template:necGeneric}} {{title=@{character_name}&#39;s Willpower Test}} {{subtitle=Rolling equal to or over their Willpower of [[@{Will} + @{Will_bonus} ]] on 2D6}} {{Roll = [[2D6]] }}"></button>
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>Int: &#43;</label>
+      <input name="attr_Int" type="number" value="1">
+      <input name="attr_Int_bonus" type="number" value="0">
+      <button name="roll_Int" type="roll" value="&{template:necGeneric}} {{title=@{character_name}&#39;s Intelligence Test}} {{subtitle=Rolling equal to or over their Intelligence of [[@{Int} + @{Int_bonus} ]] on 2D6}} {{Roll = [[2D6]] }}"></button>
+    </div>    
+    
+  </div>
+ <!-- 
+  <div class="stend section">
+     <div class="stat-block flex-center">
+      <label>Willpower:</label>
+      <input name="attr_Will" type="number" value="1">
+      <input name="attr_Will_bonus" type="number" value="">
+      <button name="roll_Will" type="roll" value="&{template:default} {{name=@{character_name}'s Willpower Test}} {{Result=[[d6+(@{Will})+(@{Will_bonus})]]}}"></button>
+     </div>
+  </div>
+
+
+  <div class="stend section">
+    <div class="stat-block flex-center">
+      <label> </label>
+    </div>
+  </div>
+-->
+
+<!-- ------------------Right Column----------------------- -->  
+
+<!-- NAME SECTION -->
+  <div class="name section">
+    <div class="section-small flex-center">
+            <input name="attr_character_name" type="text">
+            <label> </label>
+            <input name="attr_Credits" type="number" value="100">
+    </div>
+  </div>
+  
+<!-- Current Max SECTIONs -->  
+ <!-- Wounds SECTION -->
+  <div class="wounds section">
+    <div class="wound-block flex-center">
+      <label>Starting Wounds:</label>
+      <input name="attr_Wounds_max" type="number" value="1">
+      <label>Current Wounds:</label>
+      <input name="attr_Wounds" type="number" value="1">
+    </div>
+  </div>  
+  
+ <!-- Armour SECTION -->
+  <div class="armour section">
+    <div class="armour-block flex-center">
+      <label>Save</label>
+      <input name="attr_SaveThrow" type="number" value="">
+      <button name="roll_save" type="roll" value="&{template:necShield}} {{title=@{character_name}&#39;s armour }} {{subtitle= Using @{ArmourType}}} {{Armour Save= @{SaveThrow}+ }} {{Modifiers= ?{Save Modifiers|No,0|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5} }} {{Save Roll= [[1D6+?{Save Modifiers|No,0|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]]}} }}"></button>
+      <select name="attr_ArmourType">
+        <option value="None" selected="selected">None</option>
+        <option value="Ablative Overlay">Ablative Overlay</option>
+        <option value="Archaeo-Carapace">Archaeo-Carapace</option>
+        <option value="Armourweave">Armourweave</option>
+        <option value="Carapace">Carapace</option>
+        <option value="Ceramite Shield">Ceramite Shield</option>
+        <option value="Flak">Flak</option>
+        <option value="Gutterforged Cloak">Gutterforged Cloak</option>
+        <option value="Hazard Suit">Hazard Suit</option>
+        <option value="Mantle Malifica">Mantle Malifica</option>
+        <option value="Mesh Armour">Mesh Armour</option>
+        <option value="Reflec Shroud">Reflec Shroud</option>
+        <option value="Scrap Shield">Scrap Shield</option>
+        <option value="Natural Hide">Natural Hide</option>
+      </select>
+    </div>
+  </div
+  
+ <!-- GangerType SECTION -->
+ 
+  <div class="GangerType section">
+    <div class="type-block flex-right">
+      <input name="attr_Ganger_Type" type="text">    
+      <select name="attr_Category">
+        <option value="Leader">Leader</option>
+        <option value="Champion">Champion</option>
+        <option value="Prospect">Prospect</option>
+        <option value="Ganger" selected="selected">Ganger</option>
+        <option value="Juve">Juve</option>
+        <option value="Crew">Crew</option>
+        <option value="Exotic Beast">Exotic Beast</option>
+      </select> 
+      <!-- <label>GANGERTYPE</label> -->
+    </div>
+  </div> 
+
+
+ <!-- GoldLevel SECTION  
+  <div class="GoldLevel section">
+    <div class="stat-block flex-center">
+      <label>Credits:</label>
+      <input name="attr_Gold" type="number" value="">
+      <label>Credits In Stash:</label>
+      <input name="attr_Gold_max" type="number" value="">
+    </div>
+  </div> 
+-->
+<!-- treasure SECTION -->
+  <div class="treasure section flex-center flex-top flex-down">
+    <label></label>
+    <textarea name="attr_treasure" placeholder="Notes"></textarea>
+  </div>
+
+<!-- Notes SECTION -->
+  <div class="notessect section flex-center flex-top flex-down">
+    <label></label>
+    <textarea name="attr_notessect" placeholder="Notes"></textarea>
+  </div>
+
+
+<!-- MAIN WEAPON SECTION -->
+<!-- Weapon List Start-->
+
+  <div class="weaponsbeg section">
+          
+    <div class="stat-block flex-center">
+      <label></label>
+      <label>Roll Hit</label>
+      <label></label>
+      <label>Weapon </label>
+      <label></label>
+      <label> Name</label>
+      <label></label>
+      <label></label>
+      <label>Rng S"</label>
+      <label></label>
+      <label>Rng L"</label>
+      <label></label>
+      <label>Acc S&pm;</label>
+      <label></label>
+      <label>Acc L&pm;</label>
+      <label></label>
+      <label>Str</label>
+      <label></label>
+	  <label>AP</label>
+      <label></label>
+	  <label>D</label>
+      <label></label>
+	  <label>AM&#43;</label>
+	  <label></label>
+      <label></label>
+	  <label>Rapid Fire</label>
+	  <label> </label>
+      <label> </label>
+	  <label> </label>
+	  <label>Roll Wound</label>
+    </div>
+  </div>
+
+<!-- 
+      <img src="https://i.imgur.com/iVTlH05.png" alt="Melee" width="45" height="25"> <img src="https://i.imgur.com/kSNiWz9.png" alt="Ranged" width="45" height="25">
+-->
+  
+<!-- Weapon List -->
+  <div class="weapons section">
+   
+    <div class="stat-block flex-center">
+      <button name="roll_Attack1" type="roll" value="!&{template:necRanged}} {{title=@{character_name}&#39;s @{Weapon01_name}}} {{subtitle=with a [[?{Range|Short,@{Weapon01_AccS}|Long,@{Weapon01_AccL}}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Short Range=0&#39;&#39; -> @{Weapon01_RngS}&#39;&#39; with a @{Weapon01_AccS} modifier}} {{Long Range=@{Weapon01_RngS}&#39;&#39; -> @{Weapon01_RngL}&#39;&#39; with a @{Weapon01_AccL} modifier}} {{Attack Roll= [[1D6+@{BS_bonus}+?{Range|Short,@{Weapon01_AccS}|Long,@{Weapon01_AccL}}+?{Additional To Hit Modifiers|No, 0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] v&#39;s a BS of @{BS}+ [Roll To Wound](~Wound1) }} {{Weapon Strength= @{Weapon01_Str}}} {{Weapon Traits= @{Weapon01_Traits} }} {{Firepower Dice= Number of Dice: [[@{Weapon01_RF}]]}} !somescript {& if [[@{Weapon01_RF}]] = [[3]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) }} {&simple} {& elseif [[@{Weapon01_RF}]] = [[2]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) {&simple} }} {& elseif [[@{Weapon01_RF}]] = [[1]] } {{desc=@(table.Firepower.1dW.img) {&simple} }} {& else} {{desc=No Rapid Fire - check for Jam @(table.Firepower.1dW.img) }} {&simple} {& end} {&simple}" > </button>
+      <input name="attr_Weapon01_name" type="text" style="width: 120px;" value="Weapon01">
+      <input name="attr_Weapon01_RngS" type="number" value="0">
+      <input name="attr_Weapon01_RngL" type="number" value="0">
+      <input name="attr_Weapon01_AccS" type="number" value="0">
+      <input name="attr_Weapon01_AccL" type="number" value="0">
+      <input name="attr_Weapon01_Str" type="number" value="0">
+	  <input name="attr_Weapon01_AP" type="number" value="0">
+	  <input name="attr_Weapon01_D" type="number" value="0">
+	  <input name="attr_Weapon01_AM" type="number" value="0">
+	  <select name="attr_Weapon01_RF">
+        <option value="0">Not Rapid Fire</option>
+        <option value="1">Rapid Fire(1)</option>
+        <option value="2">Rapid Fire(2)</option>
+        <option value="3">Rapid Fire(3)</option>
+      </select>
+      <button name="roll_Wound1" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=with a Strength of @{Weapon01_Str} v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{Weapon01_AP} }} {{Weapon Damage= @{Weapon01_D} }} {{Injury=@(table.Injury.1dW.img)}} {&simple}  }} "> </button>
+    </div>
+    
+    <div class="stat-block flex-center flex-middle">
+       <label>Weapon Traits: </label>
+       <textarea name="attr_Weapon01_Traits" placeholder="Traits"></textarea>    
+	</div>
+	
+    <div class="stat-block flex-center">
+      <button name="roll_Attack2" type="roll" value="!&{template:necRanged}} {{title=@{character_name}&#39;s @{Weapon02_name}}} {{subtitle=with a [[?{Range|Short,@{Weapon02_AccS}|Long,@{Weapon02_AccL}}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Short Range=0&#39;&#39; -> @{Weapon02_RngS}&#39;&#39; with a @{Weapon02_AccS} modifier}} {{Long Range=@{Weapon02_RngS}&#39;&#39; -> @{Weapon02_RngL}&#39;&#39; with a @{Weapon02_AccL} modifier}} {{Attack Roll= [[1D6+@{BS_bonus}+?{Range|Short,@{Weapon02_AccS}|Long,@{Weapon02_AccL}}+?{Additional To Hit Modifiers|No, 0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] v&#39;s a BS of @{BS}+ [Roll To Wound](~Wound2) }} {{Weapon Strength= @{Weapon02_Str}}} {{Weapon Traits= @{Weapon02_Traits} }} {{Firepower Dice= Number of Dice: [[@{Weapon02_RF}]]}} !somescript {& if [[@{Weapon02_RF}]] = [[3]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) }} {&simple} {& elseif [[@{Weapon02_RF}]] = [[2]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) {&simple} }} {& elseif [[@{Weapon02_RF}]] = [[1]] } {{desc=@(table.Firepower.1dW.img) {&simple} }} {& else} {{desc=No Rapid Fire - check for Jam @(table.Firepower.1dW.img) }} {&simple} {& end} {&simple} "> </button>
+      <input name="attr_Weapon02_name" type="text" style="width: 120px;" value="Weapon02">
+      <input name="attr_Weapon02_RngS" type="number" value="0">
+      <input name="attr_Weapon02_RngL" type="number" value="0">
+      <input name="attr_Weapon02_AccS" type="number" value="0">
+      <input name="attr_Weapon02_AccL" type="number" value="0">
+      <input name="attr_Weapon02_Str" type="number" value="0">
+	  <input name="attr_Weapon02_AP" type="number" value="0">
+	  <input name="attr_Weapon02_D" type="number" value="0">
+	  <input name="attr_Weapon02_AM" type="number" value="0">
+	  <select name="attr_Weapon02_RF">
+        <option value="0">Not Rapid Fire</option>
+        <option value="1">Rapid Fire(1)</option>
+        <option value="2">Rapid Fire(2)</option>
+        <option value="3">Rapid Fire(3)</option>
+      </select>
+      <button name="roll_Wound2" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=with a Strength of @{Weapon02_Str} v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{Weapon02_AP} }} {{Weapon Damage= @{Weapon02_D} }} {{Injury=@(table.Injury.1dW.img)}} {&simple}  }}"> </button> 
+    </div>
+    
+    <div class="stat-block flex-center flex-middle">
+       <label>Weapon Traits: </label>
+       <textarea name="attr_Weapon02_Traits" placeholder="Traits"></textarea>    
+	</div>
+    
+    <div class="stat-block flex-center">
+      <button name="roll_Attack3" type="roll" value="!&{template:necRanged}} {{title=@{character_name}&#39;s @{Weapon03_name}}} {{subtitle=with a [[?{Range|Short,@{Weapon03_AccS}|Long,@{Weapon03_AccL}}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Short Range=0&#39;&#39; -> @{Weapon03_RngS}&#39;&#39; with a @{Weapon03_AccS} modifier}} {{Long Range=@{Weapon03_RngS}&#39;&#39; -> @{Weapon03_RngL}&#39;&#39; with a @{Weapon03_AccL} modifier}} {{Attack Roll= [[1D6+@{BS_bonus}+?{Range|Short,@{Weapon03_AccS}|Long,@{Weapon03_AccL}}+?{Additional To Hit Modifiers|No, 0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] v&#39;s a BS of @{BS}+ [Roll To Wound](~Wound3) }} {{Weapon Strength= @{Weapon03_Str}}} {{Weapon Traits= @{Weapon03_Traits} }} {{Firepower Dice= Number of Dice: [[@{Weapon03_RF}]]}} !somescript {& if [[@{Weapon03_RF}]] = [[3]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) }} {&simple} {& elseif [[@{Weapon03_RF}]] = [[2]] } {{desc=@(table.Firepower.1dW.img) &#38; @(table.Firepower.1dW.img) {&simple} }} {& elseif [[@{Weapon03_RF}]] = [[1]] } {{desc=@(table.Firepower.1dW.img) {&simple} }} {& else} {{desc=No Rapid Fire - check for Jam @(table.Firepower.1dW.img) }} {&simple} {& end} {&simple} "> </button>
+      <input name="attr_Weapon03_name" type="text" style="width: 120px;" value="Weapon03">
+      <input name="attr_Weapon03_RngS" type="number" value="0">
+      <input name="attr_Weapon03_RngL" type="number" value="0">
+      <input name="attr_Weapon03_AccS" type="number" value="0">
+      <input name="attr_Weapon03_AccL" type="number" value="0">
+      <input name="attr_Weapon03_Str" type="number" value="0">
+	  <input name="attr_Weapon03_AP" type="number" value="0">
+	  <input name="attr_Weapon03_D" type="number" value="0">
+	  <input name="attr_Weapon03_AM" type="number" value="0">
+	  <select name="attr_Weapon03_RF">
+        <option value="0">Not Rapid Fire</option>
+        <option value="1">Rapid Fire(1)</option>
+        <option value="2">Rapid Fire(2)</option>
+        <option value="3">Rapid Fire(3)</option>
+      </select>
+      <button name="roll_Wound3" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=with a Strength of @{Weapon03_Str} v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{Weapon03_AP} }} {{Weapon Damage= @{Weapon03_D} }} {{Injury=@(table.Injury.1dW.img)}} {&simple}  }} "> </button>
+    </div>
+    
+    <div class="stat-block flex-center flex-middle">
+       <label>Weapon Traits: </label>
+       <textarea name="attr_Weapon03_Traits" placeholder="Traits"></textarea>    
+	</div>
+	
+  </div>
+        
+<!-- Weapon List End-->
+  
+  <div class="weaponsend section">
+    <div class="stat-block flex-center">
+      <label> </label>
+    </div>
+  </div>
+
+<!--  ---------------------Melee Weapons ------------------- -->
+
+<!-- Melee Weapon List Start-->
+
+  <div class="meleewbeg section">
+          
+    <div class="stat-block flex-center">
+      <label></label>
+      <label>Roll Hit</label>
+      <label></label>
+      <label>Weapon </label>
+      <label></label>
+      <label> Name</label>
+      <label></label>
+      <label></label>
+      <label>Acc&pm;</label>
+      <label></label>
+      <label>Str Bon&pm;</label>
+      <label></label>
+      <label>AP</label>
+      <label></label>
+      <label>D</label>
+      <label></label>
+      <label>Weapon Traits: </label>
+	  <label></label>
+	  <label></label>
+	  <label>Roll Wound</label>
+    </div>
+  </div>
+
+<!-- Weapon List -->
+  <div class="meleew section">
+   
+    <div class="stat-block flex-center">
+      <button name="roll_MeleeAttack04" type="roll" value="&{template:necMelee}} {{title=@{character_name}&#39;s @{MeleeWeap04_name}}} {{subtitle=with a [[@{MeleeWeap04_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Accuracy Bonus= @{MeleeWeap04_AccMelee}}} {{Native Strength=[[@{S} + @{S_bonus}]]}} {{Weapon Strength Mod=  @{MeleeWeap04_StrBon}}} {{Attack Roll= [[1D6+[[@{MeleeWeap04_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]]]] v&#39;s a WS of @{WS}+ [Roll To Wound](~MeleeWound04)}} {{Weapon Traits= @{MeleeWeap04_Traits} }} "> </button>
+      <input name="attr_MeleeWeap04_name" type="text" style="width: 120px;" value="Weapon04">
+      <input name="attr_MeleeWeap04_AccMelee" type="number" value="0">
+      <input name="attr_MeleeWeap04_StrBon" type="number" value="0">
+      <input name="attr_MeleeWeap04_AP" type="number" value="0">
+      <input name="attr_MeleeWeap04_D" type="number" value="0">
+      <textarea name="attr_MeleeWeap04_Traits" placeholder="Traits"></textarea>
+      <button name="roll_MeleeWound04" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=Using @{MeleeWeap04_name} with a Total Strength of [[@{S}+@{S_Bonus}+@{MeleeWeap04_StrBon}]] v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{MeleeWeap04_AP} }} {{Weapon Damage= @{MeleeWeap04_D} }} {{Injury=@(table.Injury.1dW.img)}} {&simple}  }} "> </button>
+    </div>
+
+    <div class="stat-block flex-center">
+      <button name="roll_MeleeAttack05" type="roll" value="&{template:necMelee}} {{title=@{character_name}&#39;s @{MeleeWeap05_name}}} {{subtitle=with a [[@{MeleeWeap05_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Accuracy Bonus= @{MeleeWeap05_AccMelee}}} {{Native Strength=[[@{S} + @{S_bonus}]]}} {{Weapon Strength Mod=  @{MeleeWeap05_StrBon}}} {{Attack Roll= [[1D6+[[@{MeleeWeap05_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]]]] v&#39;s a WS of @{WS}+ [Roll To Wound](~MeleeWound05)}} {{Weapon Traits= @{MeleeWeap05_Traits} }} "> </button>
+      <input name="attr_MeleeWeap05_name" type="text" style="width: 120px;" value="Weapon04">
+      <input name="attr_MeleeWeap05_AccMelee" type="number" value="0">
+      <input name="attr_MeleeWeap05_StrBon" type="number" value="0">
+      <input name="attr_MeleeWeap05_AP" type="number" value="0">
+      <input name="attr_MeleeWeap05_D" type="number" value="0">
+      <textarea name="attr_MeleeWeap05_Traits" placeholder="Traits"></textarea>
+      <button name="roll_MeleeWound05" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=Using @{MeleeWeap05_name} with a Total Strength of [[@{S}+@{S_Bonus}+@{MeleeWeap05_StrBon}]] v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{MeleeWeap05_AP} }} {{Weapon Damage= @{MeleeWeap05_D} }}  {{Injury=@(table.Injury.1dW.img)}} {&simple}  }} "> </button>
+    </div>
+    
+   <div class="stat-block flex-center">
+      <button name="roll_MeleeAttack06" type="roll" value="&{template:necMelee}} {{title=@{character_name}&#39;s @{MeleeWeap06_name}}} {{subtitle=with a [[@{MeleeWeap06_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]] to hit modifier}} {{Accuracy Bonus= @{MeleeWeap06_AccMelee}}} {{Native Strength=[[@{S} + @{S_bonus}]]}} {{Weapon Strength Mod=  @{MeleeWeap06_StrBon}}} {{Attack Roll= [[1D6+[[@{MeleeWeap06_AccMelee}+?{Additional To Hit Modifiers|No,0|+1,1|+2,2|+3,3|+4,4|+5,5|-1,-1|-2,-2|-3,-3|-4,-4|-5,-5}]]]] v&#39;s a WS of @{WS}+ [Roll To Wound](~MeleeWound06)}} {{Weapon Traits= @{MeleeWeap06_Traits} }} "> </button>
+      <input name="attr_MeleeWeap06_name" type="text" style="width: 120px;" value="Weapon04">
+      <input name="attr_MeleeWeap06_AccMelee" type="number" value="0">
+      <input name="attr_MeleeWeap06_StrBon" type="number" value="0">
+      <input name="attr_MeleeWeap06_AP" type="number" value="0">
+      <input name="attr_MeleeWeap06_D" type="number" value="0">
+      <textarea name="attr_MeleeWeap06_Traits" placeholder="Traits"></textarea>
+      <button name="roll_MeleeWound06" type="roll" value="!&{template:necWound}} {{title=@{character_name}'s Roll to Wound}} {{subtitle=Using @{MeleeWeap06_name} with a Total Strength of [[@{S}+@{S_Bonus}+@{MeleeWeap06_StrBon}]] v's Toughness ?{Toughness of Target}}} {{Roll to wound= [[1D6]] }} {{Weapon AP= @{MeleeWeap06_AP} }} {{Weapon Damage= @{MeleeWeap06_D} }} {{Injury=@(table.Injury.1dW.img)}} {&simple}  }} "> </button>
+    </div>
+    
+  </div>
+        
+<!-- Weapon List End-->
+  
+  <div class="meleewend section">
+    <div class="stat-block flex-center">
+      <label> </label>
+    </div>
+  </div>
+
+
+<!-- RESISTANCE/WEAKNESS/ADVANTAGE SECTION 
+  <div class="resistance section flex-center">
+    <div>
+      <label>Resistance/</label>
+      <label>Weakness</label>
+      <hr>
+      <label>Advantage/</label>
+      <label>Disadvantage</label>
+    </div>
+    <div>
+      <input name="attr_resistance1" type="text">
+      <input name="attr_resistance2" type="text">
+      <input name="attr_resistance3" type="text">
+      <input name="attr_resistance4" type="text">
+      <input name="attr_resistance5" type="text">
+    </div>
+  </div>
+-->
+
+
+<!-- GOLD SECTION
+  <div class="gold section flex-center">
+    <label>Gold:</label>
+    <input name="attr_gold" type="number" value="0">
+  </div>
+
+-->
+
+<!-- ---------------------------Roll Templates----------------- -->
+
+<rolltemplate class="sheet-rolltemplate-necRanged">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/kSNiWz9.png" alt="Ranged Shot"> </div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+      {{#RapidFire}}<div class="sheet-RapidFire">{{RapidFire}}</div>{{/RapidFire}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+
+<!-- -------------------------- -->
+<rolltemplate class="sheet-rolltemplate-necMelee">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/iVTlH05.png" alt="Melee"> </div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+
+<!-- -------------------------- -->
+<rolltemplate class="sheet-rolltemplate-necWound">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/sqcvtU8.png" alt="Necromunda"> </div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+
+<!-- -------------------------- -->
+<rolltemplate class="sheet-rolltemplate-necGeneric">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+<!-- -------------------------- -->
+<rolltemplate class="sheet-rolltemplate-necShield">
+  <div class="sheet-container sheet-color-{{color}}">
+    <div class="sheet-header">
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/T0KFI9q.png" alt="Shield"> </div>{{/title}}
+      {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
+    </div>
+    <div class="sheet-content">
+      {{#allprops() title subtitle desc color}}
+      <div class="sheet-key">{{key}}</div>
+      <div class="sheet-value">{{value}}</div>
+      {{/allprops() title subtitle desc color}}
+      
+      {{#desc}}<div class="sheet-desc">{{desc}}</div>{{/desc}}
+    </div>
+  </div>
+</rolltemplate>
+<!--
+https://i.imgur.com/T0KFI9q.png
+</rolltemplate>
+-->
+
+<!-- ---------------------------SHEET WORKERS----------------- 
+
+<script type="text/worker">
+
+const int = score => parseInt(score, 10) || 0;
+
+// Auto-calculates & updates 'Stat Bonus' based on changes to corresponding 'Base Stat',
+// according to the table on page 5 of the Rulebook.
+// If the Base stat is less than 1, the sheet sets the bonus to "-2"
+
+const stats = ["strength", "intelligence", "charm", "arcana", "grace"];
+stats.forEach(stat => {
+    on(`change:${stat}`, () => {
+        getAttrs([stat], values => {
+            const stat_base = int(values[stat]);
+            console.log(stat_base);
+            let stat_bonus = 0;
+            if (stat_base >= 17) stat_bonus = "+4";
+            else if (stat_base >= 16) stat_bonus = "+3";
+            else if (stat_base >= 13) stat_bonus = "+2";
+            else if (stat_base >= 9) stat_bonus = "+1";
+            else if (stat_base >= 7) stat_bonus = "0";
+            else if (stat_base >= 5) stat_bonus = "-1";
+            else if (stat_base >= 1) stat_bonus = "-2";
+            else stat_bonus = "-2";
+            
+            setAttrs({
+                [`${stat}_bonus`]: stat_bonus
+            });
+        });
+    });
+});
+
+</script> -->
+
