@@ -833,7 +833,7 @@ div.sheet-meleew{
 }
 
 div.sheet-meleew div.sheet-stat-block{
-  background-image: url(https://imgur.com/GE92DRk.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/GE92DRk.png?raw=true);
     /* DONE Boarder No9 */
   background-repeat: no-repeat;
   background-size: contain;
