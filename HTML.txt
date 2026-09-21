@@ -243,7 +243,7 @@
   </div>
 
 <!-- 
-      <img src="https://i.imgur.com/iVTlH05.png" alt="Melee" width="45" height="25"> <img src="https://i.imgur.com/kSNiWz9.png" alt="Ranged" width="45" height="25">
+      <img src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/iVTlH05.png" alt="Melee" width="45" height="25"> <img src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kSNiWz9.png" alt="Ranged" width="45" height="25">
 -->
   
 <!-- Weapon List -->
@@ -444,8 +444,8 @@
 <rolltemplate class="sheet-rolltemplate-necRanged">
   <div class="sheet-container sheet-color-{{color}}">
     <div class="sheet-header">
-      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
-      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/kSNiWz9.png" alt="Ranged Shot"> </div>{{/title}}
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kSNiWz9.png" alt="Ranged Shot"> </div>{{/title}}
       {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
       {{#RapidFire}}<div class="sheet-RapidFire">{{RapidFire}}</div>{{/RapidFire}}
     </div>
@@ -464,8 +464,8 @@
 <rolltemplate class="sheet-rolltemplate-necMelee">
   <div class="sheet-container sheet-color-{{color}}">
     <div class="sheet-header">
-      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
-      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/iVTlH05.png" alt="Melee"> </div>{{/title}}
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/iVTlH05.png" alt="Melee"> </div>{{/title}}
       {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
     </div>
     <div class="sheet-content">
@@ -500,7 +500,7 @@
 <rolltemplate class="sheet-rolltemplate-necGeneric">
   <div class="sheet-container sheet-color-{{color}}">
     <div class="sheet-header">
-      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
       {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
     </div>
     <div class="sheet-content">
@@ -517,8 +517,8 @@
 <rolltemplate class="sheet-rolltemplate-necShield">
   <div class="sheet-container sheet-color-{{color}}">
     <div class="sheet-header">
-      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://i.imgur.com/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
-      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://i.imgur.com/T0KFI9q.png" alt="Shield"> </div>{{/title}}
+      {{#title}}<div class="sheet-title"><img class="sheet-NecroLogo" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png" alt="Necromunda"> </div>{{/title}}
+      {{#title}}<div class="sheet-title">{{title}}<img class="sheet-phoenix" src="https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/T0KFI9q.png" alt="Shield"> </div>{{/title}}
       {{#subtitle}}<div class="sheet-subtitle">{{subtitle}}</div>{{/subtitle}}
     </div>
     <div class="sheet-content">
@@ -532,7 +532,7 @@
   </div>
 </rolltemplate>
 <!--
-https://i.imgur.com/T0KFI9q.png
+https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/T0KFI9q.png
 </rolltemplate>
 -->
 

@@ -212,19 +212,19 @@ div.sheet-main {
   width:    846px; /* Defines the width and height of the sheet */
   height:   1650px;
   background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/IOFefj6.jpeg);
-  background-size: 846px 1650px; /* Sets the sheet border image to same size as sheet - Normal Sheet = https://i.imgur.com/MM9C2Bx.jpeg 846px 1200px */
+  background-size: 846px 1650px; /* Sets the sheet border image to same size as sheet - Normal Sheet = https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/MM9C2Bx.jpeg 846px 1200px */
   background-repeat: no-repeat;
 }
 
 /* Section-specific CSS is written in a way that removes the need to define classes
 on each individual   */
-/* ----https://i.imgur.com/K7Jd5kc.png-------------- */
+/* ----https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png-------------- */
 /* LOGO SECTION */
 
 div.sheet-logo{
   grid-area: logo;
-  background-image: url(https://i.imgur.com/K7Jd5kc.png?raw=true);
-  /* ---- old https://i.imgur.com/kKVVIT1.png-------------- */
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png?raw=true);
+  /* ---- old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kKVVIT1.png-------------- */
   background-size: 295px 70px;
   background-repeat: no-repeat;
   margin-left: 20px;
@@ -253,7 +253,7 @@ div.sheet-stbeg{
 
 
 div.sheet-stbeg div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/ctdAK6A.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/ctdAK6A.png?raw=true);
   /* DONE Boarder No1 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -294,7 +294,7 @@ div.sheet-stats{
 }
 
 div.sheet-stats div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/BiJh8Wj.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/BiJh8Wj.png?raw=true);
   /* DONE Boarder No2 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -334,7 +334,7 @@ div.sheet-stend{
 }
 
 div.sheet-stend div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/nuOLlp0.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/nuOLlp0.png?raw=true);
   /* DONE Boarder B */
   background-repeat: no-repeat;
   background-size: contain;
@@ -374,7 +374,7 @@ div.sheet-wounds{
 }
 
 div.sheet-wounds div.sheet-wound-block{
-  background-image: url(https://i.imgur.com/iivdVOC.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/iivdVOC.png?raw=true);
     /* DONE Boarder No3 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -410,8 +410,8 @@ div.sheet-armour{
 }
 
 div.sheet-armour div.sheet-armour-block{
-  background-image: url(https://i.imgur.com/bCU0AtO.png?raw=true);
-   /* DONE Boarder No4 Old https://i.imgur.com/1LJNpFI.png*/
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/bCU0AtO.png?raw=true);
+   /* DONE Boarder No4 Old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/1LJNpFI.png*/
   background-repeat: no-repeat;
   background-size: contain;
   height: 70px;
@@ -462,8 +462,8 @@ div.sheet-GangerType{
 }
 
 div.sheet-GangerType div.sheet-type-block{
-  background-image: url(https://i.imgur.com/jkJjXtv.png?raw=true);
-    /* DONE Boarder Credits old https://i.imgur.com/iivdVOC.png*/
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/jkJjXtv.png?raw=true);
+    /* DONE Boarder Credits old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/iivdVOC.png*/
   background-repeat: no-repeat;
   background-size: contain;
   height: 70px;
@@ -517,7 +517,7 @@ div.sheet-GoldLevel{
 }
 
 div.sheet-GoldLevel div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/iivdVOC.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/iivdVOC.png?raw=true);
     /* DONE Boarder No3 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -556,8 +556,8 @@ div.sheet-name{
 }
 
 div.sheet-name div.sheet-section-small{
-  background-image: url(https://i.imgur.com/stYtCAP.png?raw=true);
-   /* DONE Old Boarder No5 https://i.imgur.com/9UzKr7k.png */
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/stYtCAP.png?raw=true);
+   /* DONE Old Boarder No5 https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/9UzKr7k.png */
   background-repeat: no-repeat;
   background-size: contain;
   height: 70px;
@@ -600,8 +600,8 @@ div.sheet-name input[type="number"] {
 
 div.sheet-treasure{
   grid-area: treasure;
-  background-image: url(https://i.imgur.com/8BX8WVX.png?raw=true);
-  /* DONE Boarder No6 Old https://i.imgur.com/gT2KE4N.png or https://i.imgur.com/ouwuMnb.png*/
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/8BX8WVX.png?raw=true);
+  /* DONE Boarder No6 Old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/gT2KE4N.png or https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/ouwuMnb.png*/
   background-repeat: no-repeat;
   background-size: contain;
   height: 225px;
@@ -623,8 +623,8 @@ div.sheet-treasure textarea{
 div.sheet-notessect{
   grid-area: notessect;
   margin-left: 15px;
-  background-image: url(https://i.imgur.com/CzjuDym.png?raw=true);
-  /* DONE Boarder No6 Old https://i.imgur.com/gT2KE4N.png or https://i.imgur.com/ouwuMnb.png*/
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/CzjuDym.png?raw=true);
+  /* DONE Boarder No6 Old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/gT2KE4N.png or https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/ouwuMnb.png*/
   background-repeat: no-repeat;
   background-size: contain;
   height: 228px;
@@ -650,7 +650,7 @@ div.sheet-weaponsbeg{
 
 
 div.sheet-weaponsbeg div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/RTfLlmM.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/RTfLlmM.png?raw=true);
    /* DONE Boarder No7 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -693,7 +693,7 @@ div.sheet-weapons{
 }
 
 div.sheet-weapons div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/GE92DRk.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/GE92DRk.png?raw=true);
     /* DONE Boarder No9 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -750,7 +750,7 @@ div.sheet-weaponsend{
 
 
 div.sheet-weaponsend div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/RXdbRxo.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/RXdbRxo.png?raw=true);
      /* DONE Boarder No8 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -790,7 +790,7 @@ div.sheet-meleewbeg{
 
 
 div.sheet-meleewbeg div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/kV4sW9L.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kV4sW9L.png?raw=true);
    /* DONE Boarder No7 */
   background-repeat: no-repeat;
   background-size: contain;
@@ -888,7 +888,7 @@ div.sheet-meleewend{
 
 
 div.sheet-meleewend div.sheet-stat-block{
-  background-image: url(https://i.imgur.com/yNobl4P.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/yNobl4P.png?raw=true);
      /* DONE Boarder No8 */
   background-repeat: no-repeat;
   background-size: contain;
