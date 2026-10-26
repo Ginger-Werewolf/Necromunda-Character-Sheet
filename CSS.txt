@@ -218,12 +218,12 @@ div.sheet-main {
 
 /* Section-specific CSS is written in a way that removes the need to define classes
 on each individual   */
-/* ----https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png-------------- */
+/* ----https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kKVVIT1.png-------------- */
 /* LOGO SECTION */
 
 div.sheet-logo{
   grid-area: logo;
-  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/K7Jd5kc.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kKVVIT1.png);
   /* ---- old https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/kKVVIT1.png-------------- */
   background-size: 295px 70px;
   background-repeat: no-repeat;
@@ -443,7 +443,7 @@ div.sheet-armour div.sheet-armour-block select{
   font-family: 'Courier New', monospace;display: block;
   margin: 0 auto;
   width: 100px;
-  padding: 10px 10px;
+  padding: 2px 2px;
   border: none;
   border-radius: 5px;
   background-color: #000000;
@@ -485,7 +485,7 @@ div.sheet-GangerType div.sheet-type-block select{
   font-family: 'Courier New', monospace;display: block;
   margin: 0 auto;
   width: 100px;
-  padding: 10px 10px;
+  padding: 2px 2px;
   border: none;
   border-radius: 5px;
   background-color: #000000;
@@ -833,7 +833,7 @@ div.sheet-meleew{
 }
 
 div.sheet-meleew div.sheet-stat-block{
-  background-image: url(https://raw.githubusercontent.com/Ginger-Werewolf/Necromunda-Character-Sheet/main/images/GE92DRk.png?raw=true);
+  background-image: url(https://imgur.com/GE92DRk.png?raw=true);
     /* DONE Boarder No9 */
   background-repeat: no-repeat;
   background-size: contain;
